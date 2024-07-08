@@ -1,7 +1,7 @@
 export function square(x) {
-  return x * x;
+  console.log("This function is not used");
 }
 
 export function cube(x) {
-  return x * x * x;
+  console.log("This function is used");
 }
