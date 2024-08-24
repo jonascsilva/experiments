@@ -1,4 +1,12 @@
-# Import all named
+# How to run
+
+```bash
+npm run build
+```
+
+# Bundle size study
+
+## Import all named
 
 ```js
 import * as math from "./math";
@@ -8,7 +16,7 @@ import * as math from "./math";
 export { square, cube };
 ```
 
-# Import only used
+## Import only used
 
 ```js
 import { cube } from "./math";
@@ -22,7 +30,7 @@ import { cube, square } from "./math";
 export { square, cube };
 ```
 
-# Import default
+## Import default
 
 ```js
 import math from "./math";
@@ -32,9 +40,9 @@ import math from "./math";
 export default { square, cube };
 ```
 
-# Comparison
+## Comparison
 
-## Use only one
+### Use only one
 
 | Strategy         | Bundle size |
 | ---------------- | ----------- |
@@ -42,7 +50,7 @@ export default { square, cube };
 | Import only used | 694B        |
 | Import default   | 776B        |
 
-## Use both
+### Use both
 
 | Strategy         | Bundle size |
 | ---------------- | ----------- |
