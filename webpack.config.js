@@ -1,4 +1,5 @@
 const path = require("path");
+const { BundleStatsWebpackPlugin } = require("bundle-stats-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -11,5 +12,6 @@ module.exports = {
   optimization: {
     usedExports: true,
     minimize: true,
-  }
+  },
+  plugins: [new BundleStatsWebpackPlugin()],
 };
