@@ -1,13 +1,13 @@
-import { cube } from "./math.js";
+import * as math from "./math";
 
 function component() {
   const element = document.createElement("pre");
 
-  cube();
-
-  element.innerHTML = ["Hello webpack!", "5 cubed is equal to 125"].join(
-    "\n\n"
-  );
+  element.innerHTML = [
+    "Hello webpack!",
+    "5 cubed is equal to ",
+    math.cube(5),
+  ].join("\n\n");
 
   return element;
 }
